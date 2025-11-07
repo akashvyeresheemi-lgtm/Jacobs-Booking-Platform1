@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob's Bookings - Transport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-hover:hover {
+            animation: pulse 2s infinite;
+        }
+        .transport-card {
+            transition: all 0.3s ease;
+        }
+        .transport-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col">
+    <nav class="flex justify-between items-center p-4 bg-black bg-opacity-50 text-white">
+        <div>
+            <h1 class="text-2xl font-bold" style="font-family: 'Times New Roman', serif;">Jacob's Holidays</h1>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="M 1.html" class="nav-link">Home</a>
+            <a href="M 2.html" class="nav-link">SignUp</a>
+            <a href="M3.html" class="nav-link">Bookings</a>
+</div>
+</nav>
+
+    <!-- Background -->
+    <div class="vanta-bg" style="background-image: url('https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/kerala island.webp'); background-size: cover; background-position: center;"></div>
+
+    <main class="flex-grow">
+        <div class="container mx-auto px-4 py-12">
+            <div class="max-w-4xl mx-auto pb-12">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-white mb-4">Choose Your Transport Mode</h1>
+                    <p class="text-xl text-gray-300">Select your preferred transportation for booking tickets</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                    <!-- Flight Card -->
+                    <div class="transport-card bg-white bg-opacity-90 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl pulse-hover relative" style="background-image: url('https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/flightu.jpg'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        <div class="p-6">
+                            <div class="flex justify-center mb-6">
+                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl relative z-10">
+                                    ✈️
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-center text-white mb-2 relative z-10">Flight</h3>
+                            <p class="text-white text-center mb-6 relative z-10">Book domestic and international flights</p>
+                            <a href="https://www.skyscanner.co.in/" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-blue-500 hover:bg-blue-600 text-white text-center rounded-lg font-medium transition duration-300 relative z-10">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Train Card -->
+                    <div class="transport-card bg-white bg-opacity-90 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl pulse-hover relative" style="background-image: url('https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/railu.jpg'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        <div class="p-6">
+                            <div class="flex justify-center mb-6">
+                                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center overflow-hidden">
+                                    <img src="https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/irctc logo.webp" alt="Train Logo" class="w-full h-full object-contain">
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-center text-white mb-2 relative z-10">Train</h3>
+                            <p class="text-white text-center mb-6 relative z-10">Reserve seats on express and local trains</p>
+                            <a href="https://www.irctc.co.in/nget/train-search" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-green-500 hover:bg-green-600 text-white text-center rounded-lg font-medium transition duration-300 relative z-10">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Bus Card -->
+                    <div class="transport-card bg-white bg-opacity-90 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl pulse-hover relative" style="background-image: url('https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/ac sleeper.avif'); background-size: cover; background-position: right;">
+                        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        <div class="p-6">
+                            <div class="flex justify-center mb-6">
+                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                                    <img src="https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/ksrtc logo.jpg" alt="Bus Logo" class="w-full h-full object-contain">
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-center text-white mb-2" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Bus</h3>
+                            <p class="text-white text-center mb-6 relative z-10">Find and book intercity bus routes</p>
+                            <a href="https://ksrtc.in/" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-purple-500 hover:bg-purple-600 text-white text-center rounded-lg font-medium transition duration-300 relative z-10">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Taxi Card -->
+                    <div class="transport-card bg-white bg-opacity-90 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl pulse-hover relative" style="background-image: url('https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/taxi background.webp'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        <div class="p-6">
+                            <div class="flex justify-center mb-6">
+                                <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center overflow-hidden">
+                                    <img src="https://huggingface.co/spaces/akasha321/undefined/resolve/main/images/uber logo.png" alt="Taxi Logo" class="w-full h-full object-contain">
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-center text-white mb-2 relative z-10">Taxi</h3>
+                            <p class="text-white text-center mb-6 relative z-10">Hail a ride for local transportation</p>
+                            <a href="https://www.uber.com/in/en/" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-yellow-500 hover:bg-yellow-600 text-white text-center rounded-lg font-medium transition duration-300 relative z-10">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+</div>
+
+                <div class="mt-8 text-center">
+                    <a href="M 1.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                        <i data-feather="arrow-left" class="mr-2"></i>
+                        Back to Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="py-12 bg-black bg-opacity-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Our Clients</h2>
+            <div class="flex justify-center space-x-12">
+                <a href="https://www.ksrtc.in/" target="_blank" class="w-24 h-24 rounded-full overflow-hidden border-4 border-white transition-all duration-300 hover:scale-110 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-400/30">
+                    <img src="https://huggingface.co/spaces/Akash4321/cosmic-cat-cafe/resolve/main/images/ksrtc logo.jpg" alt="Client Logo" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </a>
+<a href="https://www.irctc.co.in/nget/train-search" target="_blank" class="w-24 h-24 rounded-full overflow-hidden border-4 border-white transition-all duration-300 hover:scale-110 hover:border-green-400 hover:shadow-lg hover:shadow-green-400/30">
+                    <img src="https://huggingface.co/spaces/Akash4321/cosmic-cat-cafe/resolve/main/images/irctc logo.webp" alt="Client Logo" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </a>
+<a href="https://www.google.com/travel/flights" target="_blank" class="w-24 h-24 rounded-full overflow-hidden border-4 border-white transition-all duration-300 hover:scale-110 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/30">
+                    <img src="https://huggingface.co/spaces/Akash4321/cosmic-cat-cafe/resolve/main/images/Google flights logog.jpg" alt="Client Logo" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </a>
+<a href="https://www.uber.com/in/en/ride/" target="_blank" class="w-24 h-24 rounded-full overflow-hidden border-4 border-white transition-all duration-300 hover:scale-110 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-400/30">
+                    <img src="https://huggingface.co/spaces/Akash4321/cosmic-cat-cafe/resolve/main/images/uber logo.png" alt="Client Logo" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </a>
+</div>
+</div>
+    </section>
+
+    <footer class="bg-black bg-opacity-50 text-white text-center p-4">
+        <p>&copy; 2025 Jacob's Bookings. All rights reserved.</p>
+    </footer>
+
+    <style>
+</style>
+<script>
+        feather.replace();
+    </script>
+</body>
+</html>
